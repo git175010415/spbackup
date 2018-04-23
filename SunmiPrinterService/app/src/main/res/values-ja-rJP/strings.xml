@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SunmiPrinterService</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_clear">clear settings</string>
+    <string name="action_print">print sample</string>
+
+    <string name="no_print_paper"><Data><![CDATA[レシート用紙おチェックしてください。]]></Data></string>
+    <string name="no_print_paper_small_txt"><Data><![CDATA[<font color="#ff7200"><u>Click to see the paper installation tutorial.</u></font>]]></Data></string>
+    <string name="wait_cool">プリンターが過熱です。少々お待ちください。</string>
+    <string name="ok_cool">The print head is cooled down,\n and ready for use.</string>
+    <string name="start_upgrade">プリンターが起動していますが、少々お待ちください。</string>
+    <string name="ok_upgrade">The printer upgrade is finished,\n and ready for use.</string>
+    <string name="fail_upgrade">Fail to update the printer.Please restart the machine to update again \n or connect the reseller for repair</string>
+    <string name="close_paper_warehouse">The printer cover is not closed, please close the cover.</string>
+    <string name="not_completely_closed">The printer cover is not completely closed, please close the cover.</string>
+    <string name="cutter_error_small_txt"><Data><![CDATA[<font color="#ff7200">Cutter repair instructions</font>]]></Data></string>
+    <string name="cutter_error_txt">Printer cutter error, please fix it manually.</string>
+    <string name="cutter_ok_txt">The printer cutter has been repaired,\nplease re-open the printer paper cover.</string>
+    <string name="ok">OK</string>
+    <string name="error_use_open">No User guide or versions are not available.</string>
+    <string name="no_print_paper_showNotification">レシート用紙がチェックしてください。</string>
+    <string name="no_paper">Printer is not detected</string>
+    <string name="no_blacklabel">The black label was not detected,Please check!</string>
+
+    <!--translate-->
+    <string name="action_cancel">cancel</string>
+    <string name="action_confirm">confirm</string>
+    <string name="action_set_line">Set the line height(px)</string>
+    <string name="action_save">Save</string>
+    <string name="action_on">On</string>
+    <string name="action_off">Off</string>
+    <string name="action_abandon">exit</string>
+    <string name="action_continue">continue</string>
+
+    <string name="printer_darkness">Printer Density</string>
+    <string name="printer_darkness_select">Density select</string>
+    <string name="printer_style">Print style setting</string>
+    <string name="printer_char">Print font compatibility mode</string>
+    <string name="printer_global">Global effect settings</string>
+    <string name="printer_global_info">Setting the final output of the printer will cover the Settings of the APP for printing effect.</string>
+    <string name="printer_height">Font two times high</string>
+    <string name="printer_width">Font two times width</string>
+    <string name="printer_font_info">Will affect print output layout, please use caution.</string>
+    <string name="printer_bold">Font bold</string>
+    <string name="printer_white">White to black</string>
+    <string name="printer_underline">The underline</string>
+    <string name="printer_set_line">Line height</string>
+    <string name="printer_line_info">When the line height is less than the character height, the line height will be set to the character height.</string>
+    <string name="printer_sample">Printer test page\n</string>
+    <string name="printer_mode_normal">Normal Model</string>
+    <string name="printer_mode_bl">Black label Model</string>
+    <string name="printer_mode_select">PrinterModel Selection</string>
+    <string name="printer_pic_bl">Black label detection position</string>
+    <string name="printer_pic_cut">Cutter setting rendering</string>
+    <string name="printer_cutting_set">Cutter Location Selection</string>
+    <string name="printer_paper_set">Paper setting</string>
+    <string name="printer_paper_setting">Set the paper size:</string>
+    <string name="printer_paper_pic">Paper Size Schematic:</string>
+    <string name="printer_char_set">Font compatibility mode</string>
+    <string name="printer_char_1">SunmiMonoSpaced 2.0</string>
+    <string name="printer_char_2">SunmiMonoSpaced 1.0</string>
+
+    <string name="text_preview">Preview</string>
+    <string name="text_char_content">Font details</string>
+    <string name="text_char_preview">ABCDEFGHIJKLMNOPQRSTUVWXYZ\nabcdefghijklmnopqrstuvwxyz\n1234567890~!@#$%……&amp;*()_+{}:"&lt;&gt;?\n商米科技</string>
+    <string name="text_char_explain">The font contained in the block are all equal-width characters. Characters not included in the block will use the Android default font. Chinese characters are all equal in width. Different font sizes and heights are different.</string>
+    <string name="text_char_explain1">Font Blocks: Basic Latin, Latin Supplements, Latin Expansion, Greek and Coptic, Greek Expansion, Cyrillic, Punctuation, etc.</string>
+    <string name="text_char_explain2">Font blocks: basic Latin, Chinese characters, Japanese and Korean, punctuation, etc.</string>
+    <string name="text_char_dialog">Different fonts support the number of characters, thickness, height, width, will affect the print effect and print layout, please choose carefully!</string>
+    <string name="title_printer">    Print Setting</string>
+    <string name="t1_title_printer">            Print Setting</string>
+    <string name="t1_title_paper">            Paper Setting</string>
+    <string name="t1_title_cutting">            Cutting Setting</string>
+    <string name="title_style">    Style Setting</string>
+    <string name="title_font">    Print font compatibility mode</string>
+
+    <string name="toast_clear">Clean all the settings！</string>
+    <string name="toast_error">set error！</string>
+
+    <string name="text_range">Input range 0～255</string>
+    <string name="text_bl">Function description：\nThe black label sensor has a distance from the cutter in the physical structure, and the black label will pass through the sensor first, then the cutter (such as the black label detection position) will be passed.\nAfter the black label is detected by the printer, the paper will be carried out according to the value saved by the user to determine the location of the last cut and the distance of the black mark on the black label paper.</string>
+    <string name="text_paper_title">Baidu takeaway\nCash on delivery</string>
+    <string name="text_paper_content">Baidu take-out test cases\nExpect delivery time:immediate delivery\nOrder notes:Send to Sunmi and do not spicy, stir fry.Please add a bottle of cola, a pack of seeds, and to help throwing rubbish. Knocks at home when coming.\n——————————————————————\nDate: 21:15 2017.7.01</string>
+
+</resources>

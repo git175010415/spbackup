@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">打印服务</string>
+    <string name="action_settings">设置</string>
+    <string name="action_clear">清除配置</string>
+    <string name="action_print">打印样张</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_confirm">确定</string>
+    <string name="action_set_line">设置行高(px)</string>
+    <string name="action_save">保存</string>
+    <string name="action_on">开</string>
+    <string name="action_off">关</string>
+    <string name="action_abandon">放弃</string>
+    <string name="action_continue">继续</string>
+
+    <string name="printer_darkness">打印浓度</string>
+    <string name="printer_darkness_select">打印浓度选择</string>
+    <string name="printer_style">打印样式设置</string>
+    <string name="printer_char">打印字体兼容模式</string>
+    <string name="printer_global">强制打印样式</string>
+    <string name="printer_global_info">设置打印机的最终输出效果，将会覆盖APP对打印效果的设置。</string>
+    <string name="printer_height">字体倍高</string>
+    <string name="printer_width">字体倍宽</string>
+    <string name="printer_font_info">将会影响打印输出排版，请谨慎启用。</string>
+    <string name="printer_bold">字体加粗</string>
+    <string name="printer_white">反白</string>
+    <string name="printer_underline">下划线</string>
+    <string name="printer_set_line">行高</string>
+    <string name="printer_line_info">当行高小于字符高度时，行高将会被设为字符高度。</string>
+    <string name="printer_sample">打印机测试页面\n</string>
+    <string name="printer_mode_normal">普通热敏</string>
+    <string name="printer_mode_bl">黑标热敏</string>
+    <string name="printer_mode_select">打印模式选择</string>
+    <string name="printer_cutting_set">切刀位置设置</string>
+    <string name="printer_pic_bl">黑标检测位置示意图</string>
+    <string name="printer_pic_cut">切刀设置效果图</string>
+    <string name="printer_paper_set">打印纸规格设置</string>
+    <string name="printer_paper_setting">设置打印纸规格:</string>
+    <string name="printer_paper_pic">打印纸规格示意图:</string>
+    <string name="printer_char_set">兼容字体模式</string>
+    <string name="printer_char_1">SunmiMonoSpaced 2.0</string>
+    <string name="printer_char_2">SunmiMonoSpaced 1.0</string>
+
+    <string name="text_preview">预览</string>
+    <string name="text_char_content">语言详情</string>
+    <string name="text_char_preview">ABCDEFGHIJKLMNOPQRSTUVWXYZ\nabcdefghijklmnopqrstuvwxyz\n1234567890~!@#$%……&amp;*()_+{}:"&lt;&gt;?\n商米科技</string>
+    <string name="text_char_explain">包含在区块中的字符均为等宽字符，不包含在区块中的字符将使用安卓默认字体，中文均为等宽，不同字体粗细和高宽不同。</string>
+    <string name="text_char_explain1">字体区块：基本拉丁语，拉丁语增补，拉丁语扩充，希腊语和科普特语，希腊语扩充，西里尔文，标点等</string>
+    <string name="text_char_explain2">字体区块：基本拉丁语，汉字，日韩语，标点等</string>
+    <string name="text_char_dialog">不同字体支持字符的数量，粗细，高度，宽度不同，会影响打印效果和打印排版，请谨慎选择！</string>
+    <string name="text_range">输入范围0~255</string>
+    <string name="text_bl">功能说明：\n黑标传感器在物理结构上与切刀有一段距离。黑标会先经过传感器，再走一段距离，才经过切刀（如黑标检测位置示意图）。\n打印机检测到黑标后，会根据用户保存的值进行走纸，以此来确定黑标纸上最后切刀的位置与黑标的距离。</string>
+    <string name="text_paper_title">百度外卖\n货到付款</string>
+    <string name="text_paper_content">百度外卖测试用例\n期望送达时间：立即配送\n订单备注：送到商米，不要辣，爆炒，加一瓶可乐，一包瓜子，帮忙扔垃圾，一个人在家，请敲门。暗号黄河黄河。\n——————————————————————\n日期：21：15 2017年7月01日</string>
+
+    <string name="title_printer">    打印设置</string>
+    <string name="t1_title_printer">            打印设置</string>
+    <string name="t1_title_paper">            打印纸规格设置</string>
+    <string name="t1_title_cutting">            切刀位置设置</string>
+    <string name="title_style">    打印样式设置</string>
+    <string name="title_font">    打印字体兼容模式</string>
+
+    <string name="toast_clear">配置已清除！</string>
+    <string name="toast_error">设置失败！</string>
+
+    <!--alert string-->
+    <string name="no_print_paper">打印纸未准备好，请检查！</string>
+    <string name="no_print_paper_small_txt"><Data><![CDATA[<font color="#ff7200">点击查看装纸教程</font>]]></Data></string>
+    <string name="wait_cool">打印头过热，请等待冷却！</string>
+    <string name="ok_cool">打印头已冷却，可正常使用！</string>
+    <string name="start_upgrade">打印机升级中，过程可能需要1-2分\n钟，升级期间打印机暂停工作</string>
+    <string name="ok_upgrade">打印机升级完成</string>
+    <string name="fail_upgrade">打印机升级失败，重启机器可能解决\n这个问题，如重启仍无法解决，请联\n系供应商</string>
+    <string name="close_paper_warehouse">打印机仓盖未关闭，请关闭仓盖！！</string>
+    <string name="not_completely_closed">打印机仓盖未完全关闭，请关闭仓盖！</string>
+    <string name="cutter_error_small_txt"><Data><![CDATA[<font color="#ff7200">修复切刀教程</font>]]></Data></string>
+    <string name="cutter_error_txt">打印机切刀错误，请手动修复。</string>
+    <string name="cutter_ok_txt">打印机切刀已经修复，\n请重新开关纸舱盖</string>
+    <string name="ok">知道了</string>
+    <string name="error_use_open">无使用指南或者版本不对应，无法查看！</string>
+    <string name="no_print_paper_showNotification">打印纸未准备好，请检查！</string>
+    <string name="no_paper">未检测到打印机</string>
+    <string name="no_blacklabel">未检测到黑标，请检查！</string>
+</resources>

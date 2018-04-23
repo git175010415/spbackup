@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="C19000000">#19000000</color>
+    <color name="DEDEDE">#dedede</color>
+    <color name="C222222">#222222</color>
+    <color name="EEEEEE">#EEEEEE</color>
+    <color name="EAEAEA">#EAEAEA</color>
+    <color name="CD2D2D2">#D2D2D2</color>
+</resources>

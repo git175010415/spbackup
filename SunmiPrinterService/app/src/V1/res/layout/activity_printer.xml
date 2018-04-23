@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingEnd="21dp"
+              android:paddingStart="21dp">
+
+    <LinearLayout
+        android:id="@+id/setDarkness"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/printer_darkness"
+            android:textColor="#222222"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:drawablePadding="11dp"
+            android:text="110%"
+            android:textColor="#999999"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dcdcdc"/>
+
+    <LinearLayout
+        android:id="@+id/setStyle"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:drawablePadding="11dp"
+            android:text="@string/printer_style"
+            android:textColor="#222222"
+            android:textSize="17sp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dcdcdc"/>
+
+
+    <LinearLayout
+        android:id="@+id/setFont"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="11dp"
+            android:layout_weight="1"
+            android:text="@string/printer_char"
+            android:textColor="#222222"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/setFontStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:drawablePadding="11dp"
+            android:text="@string/action_off"
+            android:textColor="#999999"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dcdcdc"/>
+
+</LinearLayout>

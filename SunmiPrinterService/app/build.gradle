@@ -1,0 +1,219 @@
+apply plugin: 'com.android.application'
+
+android {
+    def bugly_appid = BUGLY_APPID_VALUE
+    def mta_appkey = MTA_APP_KEY
+    signingConfigs {
+        signing {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('../H10.keystore')
+            storePassword 'android'
+        }
+        sunmi {
+            keyAlias 'sunmi'
+            keyPassword 'sunmi388'
+            storeFile file('../sunmi.keystore')
+            storePassword 'sunmi388'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "woyou.aidlservice.jiuiv5"
+        minSdkVersion 22
+        targetSdkVersion 23
+        versionCode 180326002
+        manifestPlaceholders = [BUGLY_APPID: bugly_appid, MTA_APPKEY:mta_appkey]
+		signingConfig signingConfigs.signing
+    }
+	
+	lintOptions {
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [BUGLY_ENABLE_DEBUG: "false"]
+            buildConfigField("String", "API_HOST", "\"https://api.sunmi.com\"")
+            buildConfigField("boolean", "IS_ENCRYPTED", "true")
+            buildConfigField("String", "DELIVER_KEY", "\"Jihewobox15\"")
+        }
+        uat{
+            versionNameSuffix '_uat'
+            manifestPlaceholders = [BUGLY_ENABLE_DEBUG: "true"]
+            buildConfigField("String", "API_HOST", "\"https://uat.api.sunmi.com\"")
+            buildConfigField("boolean", "IS_ENCRYPTED", "false")
+            buildConfigField("String", "DELIVER_KEY", "\"Jihewobox15\"")
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled false
+        }
+
+        tes{
+            versionNameSuffix '_tes'
+            manifestPlaceholders = [BUGLY_ENABLE_DEBUG: "true"]
+            buildConfigField("String", "API_HOST", "\"http://test.api.sunmi.com\"")
+            buildConfigField("boolean", "IS_ENCRYPTED", "false")
+            buildConfigField("String", "DELIVER_KEY", "\"Jihewobox15\"")
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled false
+        }
+
+        dev {
+        	versionNameSuffix '_dev'
+            manifestPlaceholders = [BUGLY_ENABLE_DEBUG: "true"]
+            buildConfigField("String", "API_HOST", "\"http://dev.api.sunmi.com\"")
+            buildConfigField("boolean", "IS_ENCRYPTED", "false")
+            buildConfigField("String", "DELIVER_KEY", "\"Jihewobox15\"")
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled false
+        }
+
+        debug {
+            versionNameSuffix '_debug'
+            manifestPlaceholders = [BUGLY_ENABLE_DEBUG: "true"]
+            buildConfigField("String", "API_HOST", "\"http://dev.api.sunmi.com\"")
+            buildConfigField("boolean", "IS_ENCRYPTED", "false")
+            buildConfigField("String", "DELIVER_KEY", "\"Jihewobox15\"")
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled false
+        }
+    }
+
+    /**
+     *  BIN_COMP: 指定版本号，此版本号前使用一种升级逻辑，版本号后为另一种升级逻辑，且指定为T1mini时对58 80做兼容升级逻辑
+     *  BIN_VERSION： 除T1mini机器外指定当前固件printer.bin版本，T1mini为58 printer_58.bin版本
+     *  BIN2_VERSION： 除T1mini机器外无效版本号，T1mini为80 printer_80.bin版本
+     */
+    productFlavors {
+        V1 {
+            versionName '3.1.5'
+            buildConfigField("int", "CANVASWIDTH", "384")
+            buildConfigField("boolean", "DEFAULTFONT", "false")
+            buildConfigField("String", "BIN_COMP", "\"1.00\\n\"")
+            buildConfigField("String", "BIN_VERSION", APP_V1_BIN)
+            buildConfigField("String", "BIN2_VERSION", "\"0.01\\n\"")//除T1mini此字段无效
+            ndk {
+                //设置支持的SO库架构
+                abiFilters 'armeabi-v7a' // 'arm64-v8a' ,'x86', 'armeabi-v7a', 'x86_64'
+            }
+        }
+        T1 {
+            versionName '2.3.9'
+            buildConfigField("int", "CANVASWIDTH", "576")
+            buildConfigField("boolean", "DEFAULTFONT", "true")
+            buildConfigField("String", "BIN_COMP", "\"0.03\\n\"")
+            buildConfigField("String", "BIN_VERSION", APP_T1_BIN)
+            buildConfigField("String", "BIN2_VERSION", "\"0.01\\n\"")//除T1mini此字段无效
+            ndk {
+                abiFilters 'arm64-v8a'
+            }
+        }
+        P1 {
+            versionName '3.1.7'
+            buildConfigField("int", "CANVASWIDTH", "384")
+            buildConfigField("boolean", "DEFAULTFONT", "false")
+            buildConfigField("String", "BIN_COMP", "\"1.00\\n\"")
+            buildConfigField("String", "BIN_VERSION", APP_P1_BIN)
+            buildConfigField("String", "BIN2_VERSION", "\"0.01\\n\"")//除T1mini此字段无效
+            ndk {
+                abiFilters 'armeabi-v7a'
+            }
+        }
+        V1s {
+            versionName '3.1.8'
+            buildConfigField("int", "CANVASWIDTH", "384")
+            buildConfigField("boolean", "DEFAULTFONT", "true")
+            buildConfigField("String", "BIN_COMP", "\"1.00\\n\"")
+            buildConfigField("String", "BIN_VERSION", APP_V1s_BIN)
+            buildConfigField("String", "BIN2_VERSION", "\"0.01\\n\"")//除T1mini此字段无效
+            ndk {
+                abiFilters 'armeabi-v7a'
+            }
+        }
+        T1mini {
+            versionName '2.4.2'
+            buildConfigField("int", "CANVASWIDTH", "576")
+            buildConfigField("boolean", "DEFAULTFONT", "true")
+            buildConfigField("String", "BIN_COMP", "\"T1mini\"")        //T1mini机器指定比较版本名称为T1mini
+            buildConfigField("String", "BIN_VERSION", APP_T1mini58_BIN)    //58机型的对比版本
+            buildConfigField("String", "BIN2_VERSION", APP_T1mini80_BIN)   //80机型的对比版本
+            ndk {
+                abiFilters 'armeabi', 'arm64-v8a', 'armeabi-v7a'
+            }
+        }
+        P14g {
+            versionName '1.1.6'
+            buildConfigField("int", "CANVASWIDTH", "384")
+            buildConfigField("boolean", "DEFAULTFONT", "false")
+            buildConfigField("String", "BIN_COMP", "\"1.00\\n\"")
+            buildConfigField("String", "BIN_VERSION", APP_P14g_BIN)
+            buildConfigField("String", "BIN2_VERSION", "\"0.01\\n\"")//除T1mini此字段无效
+            ndk {
+                abiFilters 'armeabi-v7a'
+            }
+            signingConfig signingConfigs.sunmi
+        }
+        T2 {
+            versionName '1.0.5'
+            buildConfigField("int", "CANVASWIDTH", "576")
+            buildConfigField("boolean", "DEFAULTFONT", "true")
+            buildConfigField("String", "BIN_COMP", "\"0.00\\n\"")
+            buildConfigField("String", "BIN_VERSION", APP_T2_BIN)
+            buildConfigField("String", "BIN2_VERSION", "\"0.00\\n\"")   //除T1mini此字段无效
+            ndk {
+                abiFilters 'arm64-v8a'
+            }
+            signingConfig signingConfigs.sunmi
+        }
+        NP {
+            versionName '1.0.2'
+            buildConfigField("int", "CANVASWIDTH", "576")
+            buildConfigField("boolean", "DEFAULTFONT", "true")
+            buildConfigField("String", "BIN_COMP", "null")
+            buildConfigField("String", "BIN_VERSION", "null")
+            buildConfigField("String", "BIN2_VERSION", "null")//除T1mini此字段无效
+            ndk {
+                abiFilters 'armeabi', 'arm64-v8a', 'armeabi-v7a'
+            }
+            signingConfig signingConfigs.sunmi
+        }
+    }
+
+    productFlavors.all { flavor ->
+        def app_version = name+"_"+versionName
+        //bugly 渠道
+        flavor.manifestPlaceholders = [BUGLY_APP_VERSION: app_version, MTA_CHANNEL:name]
+    }
+
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.each {
+                output -> output.outputFile = new File(output.outputFile.parent,  "SunmiPrinterService_" + variant.productFlavors[0].name + "_" + variant.productFlavors[0].versionName + "_" + buildType.name +  ".apk")
+            }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    compile 'com.qq.mta:mta:3.1.41-alpha'
+    compile 'com.tencent.mid:mid:3.73-alpha'
+    compile 'com.qq.visual:visual:1.0.7-alpha'
+    compile files('libs/core-3.3.0.jar')
+    compile files('libs/okhttp-3.3.0.jar')
+    compile files('libs/retrofit-2.1.0.jar')
+    compile files('libs/converter-gson-2.1.0.jar')
+    compile files('libs/gson-2.7.jar')
+    compile files('libs/okio-1.8.0.jar')
+    compile project(':StatisticsLibrary-release')
+}
